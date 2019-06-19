@@ -1,29 +1,47 @@
 import * as React from "react";
-import { StyleSheet, View,Text, Image, Button } from "react-native";
-
+import { View,Text, Image, Button, KeyboardAvoidingView } from "react-native";
+import PropTypes from "prop-types";
+import Login from "./Login"
+import Register from "./Register"
+import styles  from "../styles/splash"
 
 class Splash extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            showLogin: false
+            showLogin: false,
+            displayLoginPage: false,
+            displayRegisterPage: false
         }
     }
     componentDidMount(){
-        const { showLogin } = this.props;
+        const { showLogin, displayLoginPage } = this.props;
+        if(displayLoginPage){
+          this.setState({displayLoginPage})
+        }
         this.setState({showLogin})
     }
-    onLeftButtonClick = () => {
+    onLeftButtonClick = (event, buttonId) => {
+        event.preventDefault();
         const { showLogin } = this.state;
         if(!showLogin){
             this.setState({showLogin: true})
+        } else {
+            if(buttonId === "Login"){
+                this.setState({displayLoginPage: true})
+            }
+            else{
+                this.setState({displayRegisterPage: true})
+            }
         }
     }
     render(){
         const {showButtons, style } = this.props
-        const { showLogin } = this.state
+        const { showLogin, displayLoginPage, displayRegisterPage } = this.state
+        const leftButtonTitle = showLogin ? "Register" : "Enter As Rider";
+        const rightButtonTitle = showLogin? "Login" : "Enter As Driver"
         return(
-        <View style={style}>
+        <KeyboardAvoidingView style={style}>
             <Image source = {require('../../images/splash3.png')} style={styles.image}/>
             { /* <View style={styles.upView}></View>*/}
             <View style={styles.textView}>
@@ -33,64 +51,32 @@ class Splash extends React.Component {
                     <Text style={{color: "#FFFFFF"}}>CAB</Text>
                 </Text>
             </View>
-            { showButtons ?
+            {displayLoginPage ? <Login style={styles.loginView}/> : null}
+            {displayRegisterPage ? <Register style={styles.loginView}/> : null}
+            { showButtons && !displayLoginPage && !displayRegisterPage?
             <View style={styles.footerView}>
                 <View style={{backgroundColor: "#48668C", borderRadius: 10, width: "40%"}}>
                     <Button
-                        onPress={this.onLeftButtonClick}
-                        title={ showLogin? "Login" : "Enter As Driver" }
+                        title={ rightButtonTitle }
+                        onPress={(event) => this.onLeftButtonClick(event, rightButtonTitle)}
                         color="#FFFFFF"
                     />
                 </View>
                 <View style={{backgroundColor: "#F8C667", borderRadius: 10, width: "40%"}}>
                     <Button
-                        onPress={this.onLeftButtonClick}
-                        title={showLogin ? "Register" : "Enter As Rider"}
+                        title={ leftButtonTitle }
+                        onPress={(event) => this.onLeftButtonClick(event, leftButtonTitle)}
                         color="#FFFFFF"
                     />
                 </View>
             </View> : null}
-        </View>
+        </KeyboardAvoidingView>
     )}
 }
-
-const styles = StyleSheet.create({
-    text: {
-        fontSize: 40,
-        fontWeight: "bold",
-        fontFamily: 'Cochin',
-    },
-    textView: {
-        position: "absolute",
-        top: 0,
-        left:0,
-        right: 0,
-        bottom: 0,
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center"
-    },
-    image: {
-        width: "100%",
-        height: "100%",
-        flex:1,
-    },
-    footerView: {
-        position: "absolute",
-        bottom: 30,
-        flex: 1,
-        flexDirection: "row",
-        width: "100%",
-        padding: "auto",
-        justifyContent: "space-around"
-    },
-    upView: {
-        position: "absolute",
-        top: 0,
-        height: "50%",
-        width: "100%",
-        backgroundColor: "#55656B"
-    }
-});
-
+Splash.propTypes = {
+    style: PropTypes.object,
+    showButtons: PropTypes.bool,
+    showLogin: PropTypes.bool,
+    displayLoginPage: PropTypes.bool
+}
 export default Splash;
