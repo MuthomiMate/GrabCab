@@ -1,4 +1,3 @@
-import Page1 from './Page1';
 import NavigationMenu from './NavigationMenu';
 import {createDrawerNavigator, createAppContainer} from 'react-navigation';
 import Dashboard from './Dashboard'
@@ -6,9 +5,6 @@ import Dashboard from './Dashboard'
 const MyDrawerNavigator = createDrawerNavigator({
     Dashboard: {
         screen: Dashboard
-    },
-    Page1: {
-        screen: Page1
     }
 }, {
   contentComponent: NavigationMenu,
