@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, Image, StyleSheet, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity } from "react-native";
-import { Icon, Button } from "react-native-elements";
+import { View, Text, Image, StyleSheet, TextInput, KeyboardAvoidingView, Button} from "react-native";
+import { Icon } from "react-native-elements";
 
 class Register extends Component {
     constructor(props){
@@ -18,7 +18,7 @@ class Register extends Component {
     }
 
     render(){
-        const {password, confirmPassword, showPassword} =this.state
+        const {password, confirmPassword, showPassword } =this.state
         return (
             <View style={styles.container}>
                 <Image source = {require('../../images/back1.jpg')} style={styles.image}/>
@@ -113,9 +113,13 @@ class Register extends Component {
                             />
                         </View>
                     </View>
-                    <TouchableOpacity style={styles.buttonView}>
-                        <Text style={{color: "#FFFFFF", textAlign: "center"}}> Register Now</Text>
-                    </TouchableOpacity>
+                    <View style={styles.buttonView} >
+                        <Button
+                            title="Register Now"
+                            onPress={() => this.props.navigation.navigate('HomeDrawer')}
+                            color="#FFFFFF"
+                        />
+                    </View>
                 </KeyboardAvoidingView>
 
             </View>

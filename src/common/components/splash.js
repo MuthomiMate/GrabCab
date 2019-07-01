@@ -36,7 +36,7 @@ class Splash extends React.Component {
         }
     }
     render(){
-        const {showButtons, style } = this.props
+        const {showButtons, style, navigation} = this.props
         const { showLogin, displayLoginPage, displayRegisterPage } = this.state
         const leftButtonTitle = showLogin ? "Register" : "Enter As Rider";
         const rightButtonTitle = showLogin? "Login" : "Enter As Driver"
@@ -52,7 +52,7 @@ class Splash extends React.Component {
                 </Text>
             </View>
             {displayLoginPage ? <Login style={styles.loginView}/> : null}
-            {displayRegisterPage ? <Register style={styles.loginView}/> : null}
+            {displayRegisterPage ? <Register style={styles.loginView} navigation={navigation}/> : null}
             { showButtons && !displayLoginPage && !displayRegisterPage?
             <View style={styles.footerView}>
                 <View style={{backgroundColor: "#48668C", borderRadius: 10, width: "40%"}}>
