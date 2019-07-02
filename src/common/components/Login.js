@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { View, TextInput, StyleSheet, Button, TouchableOpacity, Text } from "react-native"
-import Register from "./Register";
-// import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"
 
 class Login extends Component {
     constructor(props){

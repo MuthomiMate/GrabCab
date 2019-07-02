@@ -1,3 +1,12 @@
 {
-    "presets": ["react-native", "module:react-native-dotenv"]
-  }
+    "plugins": [
+        [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    ],
+    "presets": ["react-native", "module:react-native-dotenv"],
+    "env": {
+      "test": {
+      }
+    }
+}

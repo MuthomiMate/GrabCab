@@ -2,22 +2,49 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "lint": "eslint ./src/**/*.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "NODE_ENV=testing jest"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testMatch": [
+      "**/__tests__/**/*.js?(x)",
+      "**/?*.(spec|test).js?(x)"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native)/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-preset-react-native": "5.0.2",
     "dotenv": "^8.0.0",
+    "enzyme": "^3.10.0",
+    "eslint": "^6.0.1",
     "expo": "^33.0.0",
     "expo-location": "^5.0.1",
     "expo-permissions": "^5.0.1",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
+    "react-addons-test-utils": "^15.4.2",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-dotenv": "^0.2.0",
@@ -26,10 +53,20 @@
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-maps": "^0.24.2",
     "react-native-web": "^0.11.4",
-    "react-navigation": "3.0.7"
+    "react-navigation": "3.0.7",
+    "react-test-renderer": "^15.4.2"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.1.1"
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "babel-eslint": "^10.0.2",
+    "babel-preset-expo": "^5.1.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-native": "^3.7.0"
   },
   "private": true
 }

@@ -1,0 +1,7 @@
+{
+    "javascript.validate.enable": false,
+    "gitblame.statusBarMessageFormat": "Blame ${author.name} ( ${time.ago} )",
+    "html.suggest.ionic": true,
+    "gitlens.codeLens.authors.enabled": true,
+    "prettier.eslintIntegration": true
+}
