@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet,} from "react-native";
 import GooglePlaces from "./GooglePlacesAutoComplete";
 
-export default SearchBar= () =>{
+const SearchBar= () =>{
     return (
         <View style={styles.container}>
             <View style={{padding: 10, paddingTop: 0, paddingBottom: 0}}>
@@ -22,7 +22,7 @@ export default SearchBar= () =>{
         </View>
     )
 }
-
+export default SearchBar;
 const styles = StyleSheet.create({
     container: {
         width: "100%",

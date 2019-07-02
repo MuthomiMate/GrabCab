@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Pick Your Travel Cab
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "marginTop": "6%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderColor": "yellow",
+          "borderRadius": 80,
+          "borderWidth": 4,
+          "height": 40,
+          "justifyContent": "center",
+          "width": 40,
+        }
+      }
+    >
+      <Themed.Icon
+        color="black"
+        name="car-side"
+        size={25}
+        type="material-community"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "borderColor": "yellow",
+          "borderRadius": 80,
+          "borderWidth": 4,
+          "height": 40,
+          "justifyContent": "center",
+          "width": 40,
+        }
+      }
+    >
+      <Themed.Icon
+        color="black"
+        name="ios-car"
+        size={25}
+        type="ionicon"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderColor": "yellow",
+          "borderRadius": 80,
+          "borderWidth": 4,
+          "height": 40,
+          "justifyContent": "center",
+          "width": 40,
+        }
+      }
+    >
+      <Themed.Icon
+        color="black"
+        name="local-taxi"
+        size={25}
+        type="material-icons"
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Share Taxi
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Prime Cab
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Go TAXI
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      15 Min
+    </Text>
+    <Text
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      7 Min
+    </Text>
+    <Text
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      2 Min
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#000000",
+        "marginTop": "5%",
+        "width": "100%",
+      }
+    }
+  >
+    <Button
+      color="white"
+      title="Book Now"
+    />
+  </View>
+</View>
+`;
