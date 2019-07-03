@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { createAppContainer, createSwitchNavigator } from "react-navigation"
-import {View} from "react-native"
+import { View } from "react-native"
 import AppNavigator from "./src/common/components/AppNavigator";
 import MyDrawerNavigator from "./src/common/components/Navigation"
 
