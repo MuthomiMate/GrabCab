@@ -1,3 +1,8 @@
+defaults: &defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:10
+
 version: 2.1
 jobs:
   checkout:
@@ -61,5 +66,5 @@ workflows:
       - test:
           requires:
             - checkout
-      
+
 
