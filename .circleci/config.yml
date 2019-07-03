@@ -7,14 +7,14 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
-      - run:
-          name: Install Dependencies
-          command: npm ci
+          keys:
+            yarn-cache-{{ checksum "yarn.lock" }}
+            - yarn-cache-
+      - run: yarn install
       - save_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
-            - /home/circleci/.npm
+            - ./node_modules
       - run:
           name: Run Tests
           command: yarn test
