@@ -1,16 +1,16 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/redux-async
+    working_directory: ~/code
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache:
           keys:
-            yarn-cache-{{ checksum "yarn.lock" }}
+            - yarn-cache-{{ checksum "yarn.lock" }}
             - yarn-cache-
-      - run: yarn install
+      - run: yarn
       - save_cache:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
