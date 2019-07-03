@@ -1,20 +1,70 @@
+defaults: &defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:10
+
 version: 2.1
 jobs:
-  build:
-    working_directory: ~/redux-async
-    docker:
-      - image: circleci/node:8
+  checkout:
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
-      - run:
-          name: Install Dependencies
-          command: npm ci
+          keys:
+            - yarn-cache-{{ checksum "yarn.lock" }}
+            - yarn-cache-
+      - run: yarn install
       - save_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
-            - /home/circleci/.npm
+            - ./node_modules
+      - persist_to_workspace:
+          root: ~/code
+          paths: .
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/code
       - run:
-          name: Run Tests
-          command: yarn test
+          name: CodeClimate Test Reporter Setup
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Code Climate Pretest
+          command: ./cc-test-reporter before-build
+      - run:
+         name: Running Tests with Coverage
+         command: yarn test:cover
+      - run:
+         name: Reporting Coverage to CodeClimate
+         command: ./cc-test-reporter after-build --exit-code $?
+
+      - persist_to_workspace:
+          root: ~/code
+          paths: .
+      - store_artifacts:
+          path: coverage
+
+  audit:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - run:
+          name: Run npm packages security vulnerabilty check
+          command: yarn check --integrity
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - checkout
+      - audit:
+          requires:
+            - checkout
+      - test:
+          requires:
+            - checkout
+
+
