@@ -1,5 +1,5 @@
 import React from 'react';
-import CabOptions from './cabOptions';
+import CabOptions from '../cabOptions';
 import { shallow } from 'enzyme';
 
 test('renders correctly', () => {

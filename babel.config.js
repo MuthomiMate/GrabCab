@@ -1,12 +1,18 @@
 module.exports = {
-    "plugins": [
+    plugins: [
         [
             "@babel/plugin-proposal-class-properties"
         ]
     ],
-    "presets": ["react-native", "module:react-native-dotenv"],
-    "env": {
-      "test": {
+    presets: ["module:metro-react-native-babel-preset", "react-native", "module:react-native-dotenv"],
+    env: {
+      test: {
+        presets: [
+            "react-native",
+            [
+                "@babel/preset-env"
+            ]
+        ]
       }
     }
 }
