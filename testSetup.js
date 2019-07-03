@@ -45,52 +45,36 @@ console.error = (message) => {
   }
   originalConsoleError(message);
 };
-
-jest.mock('react-navigation', () => {
+jest.mock('react-native-gesture-handler', () => {
+    const View = require('react-native/Libraries/Components/View/View');
     return {
-        createAppContainer: jest.fn().mockReturnValue(function NavigationContainer(props) {return null;}),
-        createDrawerNavigator: jest.fn(),
-        createMaterialTopTabNavigator: jest.fn(),
-        createStackNavigator: jest.fn(),
-        StackActions: {
-            push: jest.fn().mockImplementation(x => ({...x,  "type": "Navigation/PUSH"})),
-            replace: jest.fn().mockImplementation(x => ({...x,  "type": "Navigation/REPLACE"})),
-        },
-        NavigationActions: {
-            navigate: jest.fn().mockImplementation(x => x),
-        }
-    }
-});
-
-jest.mock('react-native', () => ({
-    NetInfo: {
-        addEventListener: jest.fn(),
-        fetch: () => {
-            return {
-                done: jest.fn()
-            }
-        }
-    },
-    NativeModules: {
-        RNPasscodeStatus: {
-            supported: jest.fn(),
-            status: jest.fn(),
-            get: jest.fn()
-        }
-    },
-    Dimensions: {
-        get: () => ({
-            width: jest.fn(),
-            height: jest.fn()
-        })
-    },
-    StyleSheet: {
-        create: () => ({})
-      },
-    Platform: {
-        OS: jest.fn(() => 'android'),
-        version: jest.fn(() => 25),
-    },
-}));
-jest.mock('prop-types');
-jest.useFakeTimers();
+      Swipeable: View,
+      DrawerLayout: View,
+      State: {},
+      ScrollView: View,
+      Slider: View,
+      Switch: View,
+      TextInput: View,
+      ToolbarAndroid: View,
+      ViewPagerAndroid: View,
+      DrawerLayoutAndroid: View,
+      WebView: View,
+      NativeViewGestureHandler: View,
+      TapGestureHandler: View,
+      FlingGestureHandler: View,
+      ForceTouchGestureHandler: View,
+      LongPressGestureHandler: View,
+      PanGestureHandler: View,
+      PinchGestureHandler: View,
+      RotationGestureHandler: View,
+      /* Buttons */
+      RawButton: View,
+      BaseButton: View,
+      RectButton: View,
+      BorderlessButton: View,
+      /* Other */
+      FlatList: View,
+      gestureHandlerRootHOC: jest.fn(),
+      Directions: {},
+    };
+  });
