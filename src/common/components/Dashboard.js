@@ -8,7 +8,7 @@ import CabOptions from "./cabOptions"
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 
-export default class DashBoard extends Component {
+class DashBoard extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -89,6 +89,8 @@ export default class DashBoard extends Component {
     );
   }
 }
+export default DashBoard
+
 const styles = StyleSheet.create({
   mapView: {
     position: "absolute",

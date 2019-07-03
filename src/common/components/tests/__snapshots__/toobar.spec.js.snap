@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToolBar /> renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#0A0F10",
+      "height": "30%",
+      "width": "100%",
+    }
+  }
+>
+  <StatusBar
+    animated={false}
+    backgroundColor="#2EBD6B"
+    barStyle="light-content"
+    showHideTransition="fade"
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "top": "10%",
+      }
+    }
+  >
+    <View>
+      <Themed.Icon
+        color="#FFFFFF"
+        name="menu"
+        size={25}
+        type="entypo"
+      />
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+          }
+        }
+      >
+        DashBoard
+      </Text>
+    </View>
+    <View />
+  </View>
+</View>
+`;
