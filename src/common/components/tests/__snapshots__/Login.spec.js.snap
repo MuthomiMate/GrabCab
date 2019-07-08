@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> renders successfully 1`] = `
+<View
+  style={Object {}}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 10,
+        "flex": 1,
+        "flexDirection": "column",
+        "height": "80%",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+          "height": "50%",
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        keyboardType="email-address"
+        placeholder="Email"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "height": "100%",
+            "textAlign": "center",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderTopColor": "black",
+          "borderTopWidth": 1,
+          "height": "50%",
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        placeholder="Password"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "height": "100%",
+            "textAlign": "center",
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "fontSize": 8,
+        "height": "20%",
+        "width": "100%",
+      }
+    }
+  >
+    <Button
+      color="#FFFFFF"
+      title="Register"
+    />
+    <TouchableOpacity
+      activeOpacity={0.2}
+      style={
+        Object {
+          "marginTop": "5%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+          }
+        }
+      >
+         Forgot Password?
+      </Text>
+    </TouchableOpacity>
+    <Button
+      color="#FFFFFF"
+      title="Login"
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar /> renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#0A0F10",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "padding": 10,
+        "paddingBottom": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <GooglePlaces
+        id="from"
+        placeholder="Where From ?"
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 10,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <GooglePlaces
+      id="to"
+      placeholder="Drop Where ?"
+    />
+  </View>
+</View>
+`;

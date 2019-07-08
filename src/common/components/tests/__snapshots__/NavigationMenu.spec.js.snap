@@ -1,0 +1,444 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationMenu /> renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#111A1C",
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "textAlign": "center",
+        "top": "8%",
+      }
+    }
+  >
+    <Themed.Avatar
+      rounded={true}
+      size="large"
+      title="MM"
+    />
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Muthomi Mate
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Themed.Icon
+        color="#FFFFFF"
+        iconStyle={
+          Object {
+            "marginRight": 10,
+          }
+        }
+        name="envelope-o"
+        size={15}
+        type="font-awesome"
+      />
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+          }
+        }
+      >
+        muthomimate@gmail.com
+      </Text>
+    </View>
+  </View>
+  <ScrollViewMock
+    contentContainerStyle={
+      Object {
+        "top": "15%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="user"
+          size={15}
+          type="entypo"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          Profile Setttings
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="car-side"
+          size={15}
+          type="material-community"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          My Rides
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="notifications"
+          size={15}
+          type="material-icons"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          Notifications
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="payment"
+          size={15}
+          type="material-icons"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          Payments
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="cut"
+          size={15}
+          type="font-awesome"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          Cuopons
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="language"
+          size={15}
+          type="font-awesome"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          English
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="headset-mic"
+          size={15}
+          type="material-icons"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          Support and FAQ
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="info"
+          size={15}
+          type="entypo"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          About us
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "margin": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#555B5E",
+            "borderRadius": 50,
+            "height": 20,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 20,
+          }
+        }
+      >
+        <Themed.Icon
+          color="#FFFFFF"
+          name="sign-out"
+          size={15}
+          type="font-awesome"
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        >
+          Sign Out
+        </Text>
+      </View>
+    </View>
+  </ScrollViewMock>
+</View>
+`;

@@ -89,6 +89,7 @@ export default class DashBoard extends Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   mapView: {
     position: "absolute",

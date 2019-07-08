@@ -11,11 +11,6 @@ class Register extends Component {
             showPassword: true
         }
     }
-    onChange = (event, input) => {
-        if(input === "password"){
-            this.setState
-        }
-    }
 
     render(){
         const {password, confirmPassword, showPassword } =this.state

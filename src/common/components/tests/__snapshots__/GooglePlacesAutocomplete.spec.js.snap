@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GooglePlaces /> renders without crashing 1`] = `
+<GooglePlacesAutocomplete
+  GooglePlacesSearchQuery={
+    Object {
+      "rankby": "distance",
+      "types": "food",
+    }
+  }
+  GoogleReverseGeocodingQuery={Object {}}
+  autoFillOnNotFound={false}
+  autoFocus={false}
+  currentLocation={false}
+  currentLocationLabel="Current location"
+  debounce={200}
+  editable={true}
+  enableEmptySections={true}
+  enableHighAccuracyLocation={true}
+  enablePoweredByContainer={true}
+  fetchDetails={true}
+  filterReverseGeocodingByTypes={Array []}
+  getDefaultValue={[Function]}
+  isRowScrollable={true}
+  keyboardShouldPersistTaps="always"
+  listViewDisplayed={false}
+  minLength={2}
+  nearbyPlacesAPI="GooglePlacesSearch"
+  numberOfLines={1}
+  onFail={[Function]}
+  onNotFound={[Function]}
+  onPress={[Function]}
+  onSubmitEditing={[Function]}
+  onTimeout={[Function]}
+  placeholder="Where From ?"
+  placeholderTextColor="#A8A8A8"
+  predefinedPlaces={Array []}
+  predefinedPlacesAlwaysVisible={false}
+  query={
+    Object {
+      "components": "country:ke",
+      "key": "some-key",
+      "language": "en",
+    }
+  }
+  renderRightButton={[Function]}
+  returnKeyType="search"
+  styles={
+    Object {
+      "description": Object {
+        "color": "white",
+        "fontWeight": "bold",
+      },
+      "listView": Object {
+        "zIndex": 500,
+      },
+      "predefinedPlacesDescription": Object {
+        "color": "white",
+      },
+      "textInput": Object {
+        "backgroundColor": "#0A0F10",
+        "color": "white",
+      },
+      "textInputContainer": Object {
+        "backgroundColor": "#0A0F10",
+      },
+    }
+  }
+  suppressDefaultStyles={false}
+  textInputHide={false}
+  textInputProps={Object {}}
+  timeout={20000}
+  underlineColorAndroid="transparent"
+/>
+`;
