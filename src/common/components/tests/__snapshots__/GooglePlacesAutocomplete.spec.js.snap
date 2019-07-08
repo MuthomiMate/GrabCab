@@ -39,7 +39,7 @@ exports[`<GooglePlaces /> renders without crashing 1`] = `
   query={
     Object {
       "components": "country:ke",
-      "key": "AIzaSyDZCD7tYrunw72Zg093q23IYB9AM1cU4YQ",
+      "key": "some-key",
       "language": "en",
     }
   }

@@ -10,6 +10,7 @@ describe("<Home />", ()=> {
 
     it("changes state after 5 seconds", (done) => {
         const wrapper = shallow(<Home />);
+        jest.setTimeout(30000);
         setTimeout(()=> {
             expect(wrapper.state().showNextPage).toBe(true)
             done();
